@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fenced Code Blocks - Markdown Reference</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Markdown Reference</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../Markdown-An-Overview/" class="nav-link">Markdown - An Overview</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../Obsidian/" class="nav-link">Obsidian</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../References/" class="nav-link">Referensi</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">2 Basic Syntax <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/Basic%20Syntax/" class="dropdown-item">Basic Syntax</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/Blockquotes/" class="dropdown-item">Blockquotes</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/Code/" class="dropdown-item">Code</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/Emphasis/" class="dropdown-item">Bold and Italic (Emphasis)</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/EscapingCharacters/" class="dropdown-item">Escaping Character</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/Headings/" class="dropdown-item">Headings</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/HorizontalRule/" class="dropdown-item">Horizontal Rule</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/Images/" class="dropdown-item">Gambar</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/LineBreaks/" class="dropdown-item">Line Break</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/Links/" class="dropdown-item">Links</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/Lists/" class="dropdown-item">List</a>
+</li>
+                                    
+<li>
+    <a href="../../2-Basic%20Syntax/Paragraph/" class="dropdown-item">Paragraf</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">3 Extended Syntax <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../DefinitionLists/" class="dropdown-item">Definition List</a>
+</li>
+                                    
+<li>
+    <a href="../ExtendedSyntax/" class="dropdown-item">Extended Syntax</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Fenced Code Blocks</a>
+</li>
+                                    
+<li>
+    <a href="../Footnotes/" class="dropdown-item">Footnotes</a>
+</li>
+                                    
+<li>
+    <a href="../HeadingID/" class="dropdown-item">HeadingID</a>
+</li>
+                                    
+<li>
+    <a href="../Strikethrough/" class="dropdown-item">Strikethrough</a>
+</li>
+                                    
+<li>
+    <a href="../Tables/" class="dropdown-item">Tabel</a>
+</li>
+                                    
+<li>
+    <a href="../TaskLists/" class="dropdown-item">Task List</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">4 Cheatsheet <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../4-Cheatsheet/Cheatsheet/" class="dropdown-item">Cheatsheet</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../ExtendedSyntax/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Footnotes/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#fenced-code-blocks" class="nav-link">Fenced Code Blocks</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#markdown-syntax" class="nav-link">Markdown Syntax</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="fenced-code-blocks">Fenced Code Blocks</h1>
+<p>Fenced Code blocks merupakan pengembangan dari blok kode standar markdown yang memiliki keunggulan dari segi estetika dan fleksibilitas penggunaan.</p>
+<p>Fenced Code Blocks ini memiliki fitur  Syntax Highlighting untuk bahasa pemrograman tertentu seperti yang terlampir pada tabel di bagian akhir halaman ini.</p>
+<p>Fenced code blocks diawali dan diakhiri dengan tiga buah tickmarks (``` )  atau tiga buah tide (\~\~\~) tanda pembuka dapat diiringi dengan nama jenis bahasa yang digunakan pada kode yang ditulis.</p>
+<h2 id="markdown-syntax">Markdown Syntax</h2>
+<pre><code>```jenis bahasa
+
+your code here
+
+```
+</code></pre>
+<h4 id="contoh">Contoh:</h4>
+<p>~~~
+ ```json
+{
+"firstName": "John",
+"lastName": "Smith",
+"age": 25
+}</p>
+<pre><code>~~~
+Di render menjadi: 
+ ```json
+{
+&quot;firstName&quot;: &quot;John&quot;,
+&quot;lastName&quot;: &quot;Smith&quot;,
+&quot;age&quot;: 25
+}
+</code></pre>
+<p>Daftar Bahasa Pemrograman yang disupport oleh <strong><em>fenced code blocks markdown</em></strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Available language mode(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ASP.NET</td>
+<td><code>asp</code>, <code>aspx</code></td>
+</tr>
+<tr>
+<td>C</td>
+<td><code>c</code></td>
+</tr>
+<tr>
+<td>C++</td>
+<td><code>c++</code>, <code>cpp</code>, <code>cplusplus</code></td>
+</tr>
+<tr>
+<td>C#</td>
+<td><code>cs</code>, <code>csharp</code></td>
+</tr>
+<tr>
+<td>Clojure</td>
+<td><code>clj</code>, <code>cljc</code>, <code>cljx</code>, <code>clojure</code></td>
+</tr>
+<tr>
+<td>CSS</td>
+<td><code>css</code>, <code>less</code>, <code>sass</code>, <code>scss</code>,   <code>styl</code>, <code>stylus</code></td>
+</tr>
+<tr>
+<td>cURL</td>
+<td><code>curl</code></td>
+</tr>
+<tr>
+<td>D</td>
+<td><code>d</code></td>
+</tr>
+<tr>
+<td>Dart</td>
+<td><code>dart</code></td>
+</tr>
+<tr>
+<td>Diff</td>
+<td><code>diff</code></td>
+</tr>
+<tr>
+<td>Docker</td>
+<td><code>dockerfile</code></td>
+</tr>
+<tr>
+<td>Erlang</td>
+<td><code>erl</code>, <code>erlang</code></td>
+</tr>
+<tr>
+<td>Go</td>
+<td><code>go</code></td>
+</tr>
+<tr>
+<td>GraphQL</td>
+<td><code>gql</code>, <code>graphql</code></td>
+</tr>
+<tr>
+<td>Groovy</td>
+<td><code>gradle</code>, <code>groovy</code></td>
+</tr>
+<tr>
+<td>Handlebars</td>
+<td><code>handlebars</code>, <code>hbs</code></td>
+</tr>
+<tr>
+<td>HTML/XML</td>
+<td><code>html</code>, <code>xhtml</code>, <code>xml</code></td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td><code>http</code></td>
+</tr>
+<tr>
+<td>Java</td>
+<td><code>java</code></td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td><code>coffeescript</code>, <code>ecmascript</code>, <code>javascript</code>,   <code>js</code>, <code>node</code></td>
+</tr>
+<tr>
+<td>JSX</td>
+<td><code>jsx</code></td>
+</tr>
+<tr>
+<td>JSON</td>
+<td><code>json</code></td>
+</tr>
+<tr>
+<td>Julia</td>
+<td><code>jl</code>, <code>julia</code></td>
+</tr>
+<tr>
+<td>Kotlin</td>
+<td><code>kotlin</code>, <code>kt</code></td>
+</tr>
+<tr>
+<td>Liquid</td>
+<td><code>liquid</code></td>
+</tr>
+<tr>
+<td>Lua</td>
+<td><code>lua</code></td>
+</tr>
+<tr>
+<td>Markdown</td>
+<td><code>markdown</code></td>
+</tr>
+<tr>
+<td>Objective-C</td>
+<td><code>objc</code>, <code>objectivec</code></td>
+</tr>
+<tr>
+<td>Objective-C++</td>
+<td><code>objc++</code>, <code>objcpp</code>, <code>objectivecpp</code>,   <code>objectivecplusplus</code></td>
+</tr>
+<tr>
+<td>OCaml</td>
+<td><code>ocaml</code>, <code>ml</code></td>
+</tr>
+<tr>
+<td>Perl</td>
+<td><code>perl</code>, <code>pl</code></td>
+</tr>
+<tr>
+<td>PHP</td>
+<td><code>php</code></td>
+</tr>
+<tr>
+<td>PowerShell</td>
+<td><code>powershell</code>, <code>ps1</code></td>
+</tr>
+<tr>
+<td>Python</td>
+<td><code>py</code>, <code>python</code></td>
+</tr>
+<tr>
+<td>R</td>
+<td><code>r</code></td>
+</tr>
+<tr>
+<td>React</td>
+<td><code>jsx</code></td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td><code>jruby</code>, <code>macruby</code>, <code>rake</code>, <code>rb</code>, <code>rbx</code>, <code>ruby</code></td>
+</tr>
+<tr>
+<td>Rust</td>
+<td><code>rs</code>, <code>rust</code></td>
+</tr>
+<tr>
+<td>Scala</td>
+<td><code>scala</code></td>
+</tr>
+<tr>
+<td>Shell</td>
+<td><code>bash</code>, <code>sh</code>, <code>shell</code>, <code>zsh</code></td>
+</tr>
+<tr>
+<td>Solidity</td>
+<td><code>sol</code>, <code>solidity</code></td>
+</tr>
+<tr>
+<td>SQL</td>
+<td><code>cql</code>, <code>mssql</code>, <code>mysql</code>, <code>plsql</code>,    <code>postgres</code>,   <code>postgresql</code>, <code>pgsql</code>, <code>sql</code>, <code>sqlite</code></td>
+</tr>
+<tr>
+<td>Swift</td>
+<td><code>swift</code></td>
+</tr>
+<tr>
+<td>TypeScript</td>
+<td><code>ts</code>, <code>typescript</code></td>
+</tr>
+<tr>
+<td>YAML</td>
+<td><code>yaml</code>, <code>yml</code></td>
+</tr>
+</tbody>
+</table>
+<p>Untuk daftar lengkap bahasa pemrograman yang bisa di-<em>highlight</em> oleh [[Obsidian]], bisa diakses <a href="https://prismjs.com/#supported-languages">di sini</a></p>
+<p>Kembali ke <a href="../ExtendedSyntax/">Extended Syntax</a>    <br />
+Kembali ke <a href="/">Home</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
